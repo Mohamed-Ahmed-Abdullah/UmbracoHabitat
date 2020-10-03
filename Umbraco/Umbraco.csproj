@@ -288,7 +288,12 @@
     <Content Include="config\Lang\sv-SE.user.xml" />
     <Content Include="config\Lang\zh-CN.user.xml" />
     <Content Include="config\logviewer.searches.config.js" />
+    <Content Include="css\vendor.css" />
+    <Content Include="css\vendor.min.css" />
     <Content Include="Global.asax" />
+    <Content Include="Media\HabitatNew.png" />
+    <Content Include="scripts\Sitecore.Foundation.Frameworks.js" />
+    <Content Include="scripts\Sitecore.Foundation.Theming.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -317,6 +322,8 @@
     <Content Include="Views\Partials\Grid\Bootstrap3.cshtml" />
     <Content Include="Views\Partials\Grid\Bootstrap3-Fluid.cshtml" />
     <Content Include="Views\Partials\BlockList\Default.cshtml" />
+    <Content Include="Views\Home.cshtml" />
+    <Content Include="Views\Master.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -324,6 +331,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -339,7 +347,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>56718</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost/Umbraco</IISUrl>
+          <IISUrl>http://Umbraco</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
