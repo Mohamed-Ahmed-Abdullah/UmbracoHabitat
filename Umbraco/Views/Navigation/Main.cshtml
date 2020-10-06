@@ -1,0 +1,165 @@
+﻿<nav class="navbar navbar-default navbar-static" id="mainNavbar">
+    <div class="container">
+        <div class="navbar-left">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#siteNavbar" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+
+
+
+            <a class="navbar-brand " href="/">
+                <span class="logo">
+                    <img src="/Media/HabitatNew.png" alt="Habitat Logo" width="226" height="50" disablewebedit="False">
+                </span>
+            </a>
+
+        </div>
+        <div class="navbar-center">
+
+        </div>
+        <div class="navbar-right">
+            <div class="collapse navbar-collapse" id="siteNavbar">
+                <ul class="nav navbar-nav">
+                    <li class=" dropdown">
+                        <a href="/About-Habitat" class="dropdown-toggle text-uppercase" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            About Habitat<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="">
+                                <a href="/About-Habitat/Introduction" target="">Introduction</a>
+                            </li>
+                            <li class="">
+                                <a href="/About-Habitat/Getting-Started" target="">Getting Started</a>
+                            </li>
+                            <li class="">
+                                <a href="http://helix.sitecore.net" target="_blank">Helix Documentation</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class=" dropdown">
+                        <a href="/Modules" class="dropdown-toggle text-uppercase" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            Modules<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="">
+                                <a href="/Modules/Project" target="">Project</a>
+                            </li>
+                            <li class="">
+                                <a href="/Modules/Feature" target="">Feature</a>
+                            </li>
+                            <li class="">
+                                <a href="/Modules/Foundation" target="">Foundation</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a class="text-uppercase" href="/SomeAnotherArticle" target="">
+                            SomeArticle
+                        </a>
+                    </li>
+                    <li class="">
+                        <a class="text-uppercase" href="/SomeArticle" target="">
+                            SomeArticle
+                        </a>
+                    </li>
+                    <li class="">
+                        <a class="text-uppercase" href="/More-Info" target="">
+                            More Info
+                        </a>
+                    </li>
+                </ul>
+            </div><div class="navbar-activity">
+                <ul class="nav navbar-nav">
+
+
+                    <li class="dropdown">
+                        <a href="#" class="btn dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-globe"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="">
+                                <a href="http://habitat.local/da/somearticle/" onclick="return SwitchToLanguage('da', 'en', 'http://habitat.local/da/somearticle/')">dansk</a>
+                            </li>
+                            <li class="">
+                                <a href="http://habitat.local/ja-jp/somearticle/" onclick="return SwitchToLanguage('ja-JP', 'en', 'http://habitat.local/ja-jp/somearticle/')">日本語 (日本)</a>
+                            </li>
+                            <li class="active">
+                                <a href="http://habitat.local/en/somearticle/" onclick="return SwitchToLanguage('en', 'en', 'http://habitat.local/en/somearticle/')">English</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown hidden-xs">
+                        <a href="#" class="btn dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-user"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                            <form action="/api/sitecore/Accounts/Logout" method="post">
+                                <div class="form-group">
+                                    <label class="control-label">Name</label>
+                                    <div class="form-control-static">Administrator</div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">E-mail</label>
+                                    <div class="form-control-static"></div>
+                                </div>
+                                <a class="btn btn-block btn-primary" href="/Edit-Profile">Edit details</a>
+                                <button type="submit" class="btn btn-block btn-default">Logout</button>
+                            </form>
+                        </div>
+                    </li>
+                    <li class="navbar-activity-search dropdown">
+                        <form action="/Search" class="navbar-form" role="search">
+                            <div class="form-group">
+                                <input type="text" name="query" id="searchInputBox" placeholder="Enter a text to search for..." autocomplete="off">
+                            </div>
+                        </form>
+
+                        <a href="#" class="btn navbar-toggle-search" data-toggle-class="is-searching" data-target="#mainNavbar">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </a>
+
+                        <div class="dropdown-menu dropdown-menu-wide" id="navbar-activity-search-results">
+                            <div class="row panel-loading">
+                                <div class="col-md-12">
+                                    <div class="text-center p-b-1">
+                                        Searching...
+                                    </div>
+                                    <div class="text-center">
+                                        <span class="fa fa-spinner fa-2x fa-spin"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row panel-results">
+                                <div class="col-md-12">
+                                    <ul class="media-list results"></ul>
+                                </div>
+                            </div>
+                            <div class="row panel-result-count">
+                                <div class="col-md-12">
+                                    <small>
+                                        <em class="result-count"></em>
+                                        search results found.
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="row panel-facet-values">
+                                <div class="col-md-12">
+                                    <ul class="facet-values"></ul>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <button class="btn btn-primary btn-sm pull-right" onclick="$('.navbar-activity-search form').submit()">Search</button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>

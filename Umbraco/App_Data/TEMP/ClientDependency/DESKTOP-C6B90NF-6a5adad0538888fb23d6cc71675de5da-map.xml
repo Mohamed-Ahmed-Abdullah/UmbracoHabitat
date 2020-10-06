@@ -1,2 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<map />
+<map>
+  <item key="L2Nzcy92ZW5kb3IuY3NzOy9jc3Mvbml0ZWZsaWdodC5jc3M7" file="C:\Users\Mohamed.Abdullah\source\repos\UmbracoHabitat\Umbraco\App_Data\TEMP\ClientDependency\1_69768fba987b47ca949249417b9c6d51.cdC" compression="gzip" version="1">
+    <files>
+      <file name="/css/vendor.css" />
+      <file name="/css/niteflight.css" />
+    </files>
+  </item>
+  <item key="L3NjcmlwdHMvU2l0ZWNvcmUuRm91bmRhdGlvbi5GcmFtZXdvcmtzLmpzOy9zY3JpcHRzL1NpdGVjb3JlLkZvdW5kYXRpb24uVGhlbWluZy5qczs" file="C:\Users\Mohamed.Abdullah\source\repos\UmbracoHabitat\Umbraco\App_Data\TEMP\ClientDependency\1_a763c8f6ee9948d1a6d31282b0b48f38.cdJ" compression="gzip" version="1">
+    <files>
+      <file name="/scripts/Sitecore.Foundation.Frameworks.js" />
+      <file name="/scripts/Sitecore.Foundation.Theming.js" />
+    </files>
+  </item>
+</map>

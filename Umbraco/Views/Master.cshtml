@@ -1,286 +1,260 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+
+@using ClientDependency.Core.Mvc
+
 @{
     Layout = null;
+
+    //This will combine all of the css to one file and all the js to one file make sure <compilation debug="true"/>
+    Html.RequiresCss("/css/vendor.css");
+    Html.RequiresCss("/css/niteflight.css");
+
+    Html.RequiresJs("/scripts/Sitecore.Foundation.Frameworks.js");
+    Html.RequiresJs("/scripts/Sitecore.Foundation.Theming.js");
+
 }
 
 <!DOCTYPE html>
-<html lang="en" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths" >
+<html lang="en" class="js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths">
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-    <script src="/scripts/Sitecore.Foundation.Frameworks.js"></script>
-    <script src="/scripts/Sitecore.Foundation.Theming.js"></script>
+    @Html.RenderCssHere();
+    
+    @Html.RenderJsHere();
 
-    <link href="/css/vendor.css" rel="stylesheet">
-    <link href="/css/niteflight.css" rel="stylesheet">
 </head>
 
-<body class="header-static ">
+<body class="header-static">
+
     <div id="main-container">
         <header class="header-static">
-            <div class="header-top">
+
+            @Html.Partial("~/Views/Navigation/HeaderTop.cshtml");
+
+            @Html.Partial("~/Views/Navigation/Main.cshtml");
+
+        </header>
+
+        <main role="main">
+
+            <header class="page-header">
+                <div id="carousel5111a0ece9ea46b1bac4b8ead7627680" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel5111a0ece9ea46b1bac4b8ead7627680" data-slide-to="0" class=""></li>
+                        <li data-target="#carousel5111a0ece9ea46b1bac4b8ead7627680" data-slide-to="1" class="active"></li>
+                        <li data-target="#carousel5111a0ece9ea46b1bac4b8ead7627680" data-slide-to="2" class=""></li>
+                        <li data-target="#carousel5111a0ece9ea46b1bac4b8ead7627680" data-slide-to="3" class=""></li>
+                    </ol>
+
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item">
+
+
+                            <div class="jumbotron jumbotron-xl bg-media" style="background-image: url('/media/Habitat-004-wide.jpg')">
+
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <h1>Simplicity</h1>
+                                            <p class="lead">
+                                                A consistent and discoverable architecture
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item active">
+
+
+                            <div class="jumbotron jumbotron-xl bg-media" style="background-image: url('/media/Habitat-007-wide.jpg')">
+
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <h1>Flexibility</h1>
+                                            <p class="lead">
+                                                Change and add quickly and without worry
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+
+
+                            <div class="jumbotron jumbotron-xl bg-media" style="background-image: url('/media/Habitat-001-wide.jpg')">
+
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <h1>Extensibility</h1>
+                                            <p class="lead">
+                                                Add new features, simply and without a steep learning curve
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+
+
+                            <div class="jumbotron jumbotron-xl bg-media" style="background-image: url('/media/Habitat-071-wide.jpg')">
+                                <video autoplay="" loop="" muted="" class="video-bg">
+                                    <source src="/media/Sitecore Experience.mp4" type="video/mp4">
+                                </video>
+
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <h1>Sitecore Powered!</h1>
+                                            <p class="lead">
+                                                Fully Leveraging the power of Sitecore
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a class="left carousel-control" href="#carousel5111a0ece9ea46b1bac4b8ead7627680" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel5111a0ece9ea46b1bac4b8ead7627680" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+
+                </div>
+            </header>
+
+            <section class="section section-full ">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-6 hidden-xs">
+                        <div class="col-sm-4">
 
-
-                            <nav>
-                                <ul class="nav nav-service navbar-nav nav-social">
-                                    <li class="">
-                                        <a href="http://facebook.com/sitecore" target="_blank" title="Facebook" class="btn btn-social-icon btn-facebook">
-                                            <span class="fa fa-facebook"></span>
-                                        </a>
-                                    </li>
-                                    <li class="">
-                                        <a href="http://twitter.com/sitecore" target="_blank" title="Twitter" class="btn btn-social-icon btn-twitter">
-                                            <span class="fa fa-twitter"></span>
-                                        </a>
-                                    </li>
-                                    <li class="">
-                                        <a href="https://www.youtube.com/user/sitecorechannel" target="_blank" title="YouTube" class="btn btn-social-icon btn-youtube">
-                                            <span class="fa fa-youtube"></span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </nav>
+                            <div class="thumbnail">
+                                <a href="/About-Habitat/Introduction">
+                                    <img src="/media/Habitat-067-square.jpg" class="img-responsive" alt="" width="500" height="500" disablewebedit="False">
+                                </a>
+                                <div class="caption">
+                                    <h3 class="teaser-heading">
+                                        Introduction to Habitat
+                                    </h3>
+                                    <p>
+                                    </p><p>Sitecore Habitat is a range of sites demonstrating the capabilities of the Sitecore Experience Platform. </p>
+                                    <p>The solution is built on the Sitecore Helix guidelines, which&nbsp;<span>focuses on increasing productivity and quality in Sitecore projects</span>.</p>
+                                    <p></p>
+                                    <a href="/About-Habitat/Introduction" class="btn btn-default">
+                                        Read more
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-md-6 hidden-xs">
-                            <div class="pull-right">
+                        <div class="col-sm-4">
 
-                                <nav>
-                                    <ul class="nav nav-service navbar-nav nav-pills">
-                                        <li class="">
-                                            <a href="https://github.com/Sitecore/Habitat/" target="" title="Habitat" class="">
-                                                Habitat
-                                            </a>
-                                        </li>
-                                        <li class="">
-                                            <a href="http://helix.sitecore.net" target="" title="Helix" class="">
-                                                Helix
-                                            </a>
-                                        </li>
-                                        <li class="divider-left">
-                                            <a href="https://www.sitecore.net" target="_blank" title="Sitecore.net" class="">
-                                                Sitecore.net
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </nav>
+                            <div class="thumbnail">
+                                <a href="/Modules">
+                                    <img src="/media/Habitat-046-square.jpg" class="img-responsive" alt="" width="500" height="500" disablewebedit="False">
+                                </a>
+                                <div class="caption">
+                                    <h3 class="teaser-heading">
+                                        Modules
+                                    </h3>
+                                    <p>
+                                        The Habitat example implementation has a range of modules which covers the basics of a Sitecore website.<br>
+                                    </p>
+                                    <a href="/Modules" class="btn btn-default">
+                                        Read more
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+
+                            <div class="thumbnail">
+                                <a href="/About-Habitat/Getting-Started">
+                                    <img src="/media/Habitat-022-square.jpg" class="img-responsive" alt="" width="500" height="500" disablewebedit="False">
+                                </a>
+                                <div class="caption">
+                                    <h3 class="teaser-heading">
+                                        Getting Started
+                                    </h3>
+                                    <p>
+                                    </p><p>Sitecore Helix a defined methodology with conventions and practises - Habitat is an example implementation available for your understanding.</p>
+                                    <p></p>
+                                    <a href="/About-Habitat/Getting-Started" class="btn btn-default">
+                                        Read more
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
-
-            <nav class="navbar navbar-default navbar-static" id="mainNavbar">
+            <section class="section section-full bg-secondary">
                 <div class="container">
-                    <div class="navbar-left">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#siteNavbar" aria-expanded="false">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12">
 
 
 
+                            <div class="jumbotron text-center " style="background-image: none">
 
-                        <a class="navbar-brand " href="/">
-                            <span class="logo">
-                                <img src="/Media/HabitatNew.png" alt="Habitat Logo" width="226" height="50" disablewebedit="False">
-                            </span>
-                        </a>
+                                <h2>
+                                    Download Habitat Now!
+                                </h2>
+                                <p class="">
+                                    Habitat is available as a Sitecore Package and the sourcecode is available on Github.
+                                </p>
+                                <a class="btn btn-primary btn-lg" rel="noopener noreferrer" href="http://www.github.com/sitecore/habitat" target="_blank">Visit Habitat on Github</a>
+                            </div>
 
-                    </div>
-                    <div class="navbar-center">
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
 
-                    </div>
-                    <div class="navbar-right">
-                        <div class="collapse navbar-collapse" id="siteNavbar">
-                            <ul class="nav navbar-nav">
-                                <li class=" dropdown">
-                                    <a href="/About-Habitat" class="dropdown-toggle text-uppercase" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                        About Habitat<span class="caret"></span>
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li class="">
-                                            <a href="/About-Habitat/Introduction" target="">Introduction</a>
-                                        </li>
-                                        <li class="">
-                                            <a href="/About-Habitat/Getting-Started" target="">Getting Started</a>
-                                        </li>
-                                        <li class="">
-                                            <a href="http://helix.sitecore.net" target="_blank">Helix Documentation</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class=" dropdown">
-                                    <a href="/Modules" class="dropdown-toggle text-uppercase" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                        Modules<span class="caret"></span>
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li class="">
-                                            <a href="/Modules/Project" target="">Project</a>
-                                        </li>
-                                        <li class="">
-                                            <a href="/Modules/Feature" target="">Feature</a>
-                                        </li>
-                                        <li class="">
-                                            <a href="/Modules/Foundation" target="">Foundation</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="">
-                                    <a class="text-uppercase" href="/SomeAnotherArticle" target="">
-                                        SomeArticle
-                                    </a>
-                                </li>
-                                <li class="">
-                                    <a class="text-uppercase" href="/SomeArticle" target="">
-                                        SomeArticle
-                                    </a>
-                                </li>
-                                <li class="">
-                                    <a class="text-uppercase" href="/More-Info" target="">
-                                        More Info
-                                    </a>
-                                </li>
-                            </ul>
-                        </div><div class="navbar-activity">
-                            <ul class="nav navbar-nav">
+                            <blockquote class="blockquote-center ">
+                                <header>
+                                    <img src="/media/Anders Laub Christoffersen.png" class="img-responsive" alt="Anders Laub Christoffersen" width="157" height="119" disablewebedit="False">
+                                    <p>
+                                        Anders Laub Christoffersen
+                                    </p>
+                                    <p>
+                                        Sitecore MVP
 
+                                    </p>
+                                </header>
+                                <p>
+                                    [Habitat...] is nothing less than groundbreaking, it is a real revolution in the way that Sitecore teaches developers to work with their product.
+                                </p>
+                            </blockquote>
 
-                                <li class="dropdown">
-                                    <a href="#" class="btn dropdown-toggle" data-toggle="dropdown">
-                                        <i class="fa fa-globe"></i>
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li class="">
-                                            <a href="http://habitat.local/da/somearticle/" onclick="return SwitchToLanguage('da', 'en', 'http://habitat.local/da/somearticle/')">dansk</a>
-                                        </li>
-                                        <li class="">
-                                            <a href="http://habitat.local/ja-jp/somearticle/" onclick="return SwitchToLanguage('ja-JP', 'en', 'http://habitat.local/ja-jp/somearticle/')">日本語 (日本)</a>
-                                        </li>
-                                        <li class="active">
-                                            <a href="http://habitat.local/en/somearticle/" onclick="return SwitchToLanguage('en', 'en', 'http://habitat.local/en/somearticle/')">English</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown hidden-xs">
-                                    <a href="#" class="btn dropdown-toggle" data-toggle="dropdown">
-                                        <i class="fa fa-user"></i>
-                                    </a>
-                                    <div class="dropdown-menu">
-                                        <form action="/api/sitecore/Accounts/Logout" method="post">
-                                            <div class="form-group">
-                                                <label class="control-label">Name</label>
-                                                <div class="form-control-static">Administrator</div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label">E-mail</label>
-                                                <div class="form-control-static"></div>
-                                            </div>
-                                            <a class="btn btn-block btn-primary" href="/Edit-Profile">Edit details</a>
-                                            <button type="submit" class="btn btn-block btn-default">Logout</button>
-                                        </form>
-                                    </div>
-                                </li>
-                                <li class="navbar-activity-search dropdown">
-                                    <form action="/Search" class="navbar-form" role="search">
-                                        <div class="form-group">
-                                            <input type="text" name="query" id="searchInputBox" placeholder="Enter a text to search for..." autocomplete="off">
-                                        </div>
-                                    </form>
-
-                                    <a href="#" class="btn navbar-toggle-search" data-toggle-class="is-searching" data-target="#mainNavbar">
-                                        <span class="glyphicon glyphicon-search"></span>
-                                    </a>
-
-                                    <div class="dropdown-menu dropdown-menu-wide" id="navbar-activity-search-results">
-                                        <div class="row panel-loading">
-                                            <div class="col-md-12">
-                                                <div class="text-center p-b-1">
-                                                    Searching...
-                                                </div>
-                                                <div class="text-center">
-                                                    <span class="fa fa-spinner fa-2x fa-spin"></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row panel-results">
-                                            <div class="col-md-12">
-                                                <ul class="media-list results"></ul>
-                                            </div>
-                                        </div>
-                                        <div class="row panel-result-count">
-                                            <div class="col-md-12">
-                                                <small>
-                                                    <em class="result-count"></em>
-                                                    search results found.
-                                                </small>
-                                            </div>
-                                        </div>
-                                        <div class="row panel-facet-values">
-                                            <div class="col-md-12">
-                                                <ul class="facet-values"></ul>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <button class="btn btn-primary btn-sm pull-right" onclick="$('.navbar-activity-search form').submit()">Search</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="well ">
+                                <h5 class="text-uppercase">News</h5>
+                                <ul class="media-list">
+                                </ul>
+                                <a href="/Modules/Feature/News/News" class="btn btn-default">
+                                    Read more
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </nav>
-        </header>
+            </section>
 
-
-        <main role="main">
-            <header class="page-header bg-media bg-parallax" style="background-image: url('/-/media/Habitat/Images/Square/Default.jpg?h=1080&amp;w=1080&amp;hash=D8E1AC4C10692B400C5A2F68DCEF99243CE27B1B')">
-                <div class="container">
-                    <ol class="breadcrumb">
-                        <li class="">
-                            <a href="/">Home</a>
-                        </li>
-                        <li class="active">
-                            <a href="/HeaderFooter">HeaderFooter</a>
-                        </li>
-                    </ol>
-                </div>
-            </header>
-            <div class="container ">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <aside>
-                        </aside>
-                    </div>
-                    <div class="col-lg-8">
-                        <article>
-
-                            <header>
-                                <h1>
-                                    HeaderFooter
-                                </h1>
-                            </header>
-
-                        </article>
-                        <div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
         </main>
-
 
         <footer class="bg-dark">
             <div class="container">
@@ -348,7 +322,7 @@
                     </div>
                     <div class="col-md-4 col-sm-6">
 
-                        <div class="well ">
+                        <div class="well bg-dark">
                             <h4>
                                 About Habitat
                             </h4>
@@ -361,7 +335,7 @@
                     <div class="col-md-4 col-sm-6">
 
 
-                        <div class="well ">
+                        <div class="well bg-dark">
                             <h4>Contact information</h4>
 
                             <address>
@@ -399,6 +373,276 @@
                 </div>
             </div>
         </footer>
+
+        @*Sidebar*@
+        <div class="off-canvas-sidebar off-canvas-sidebar-right" style="
+    /* display: none; */
+">
+            <div class="btn-group-vertical hover" role="group">
+                <button type="button" class="btn btn-info sidebar-closed" data-toggle="sidebar" title="Open visit details panel" data-side="right" style="display: none;">
+                    <span class="glyphicon glyphicon-info-sign icon-md "></span>
+                </button>
+                <button type="button" class="btn btn-info btn-lg sidebar-opened" style="" data-toggle="sidebar" title="Close visit details panel" data-side="right">
+                    <span class="glyphicon glyphicon-remove"></span>
+                    <span class="hover-only">Close</span>
+                </button>
+                <button href="#" style="" class="btn btn-success refresh-sidebar sidebar-opened" title="Refresh visit details panel">
+                    <span class="glyphicon glyphicon-refresh"></span>
+                    <span class="hover-only">Refresh</span>
+                </button>
+                <button href="#" class="btn btn-danger end-visit sidebar-opened" style="" title="End the current visit and submit it to the Sitecore Experience Database">
+                    <span class="glyphicon glyphicon-eye-close"></span>
+                    <span class="hover-only">End Visit</span>
+                </button>
+            </div>
+
+            <div class="sidebar sidebar-fixed-right">
+                <div class="panel-group" id="experiencedata">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading" role="tab">
+                            <h3 class="panel-title">
+                                <a role="button" href="#visitsPanel" data-toggle="collapse" class="panel-title collapsed" data-parent="#experiencedata">
+                                    <span class="fa fa-heart"></span>
+                                    Engagement
+                                    <span class="badge" title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Engagement value:">
+                                        <span class="fa fa-heart"></span>
+                                        0
+                                    </span>
+                                    <span class="badge" title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Pages Viewed">
+                                        <span class="fa fa-eye"></span>
+                                        1
+                                    </span>
+                                    <span class="badge" title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Number of Visits">
+                                        <span class="fa fa-history"></span>
+                                        2
+                                    </span>
+                                    <span class="glyphicon glyphicon-chevron-down pull-right"></span>
+                                </a>
+                            </h3>
+                        </div>
+                        <div id="visitsPanel" class="panel-collapse collapse" role="tabpanel">
+                            <div class="panel-body">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <span class="fa fa-heart"></span>
+                                    </div>
+
+                                    <div class="media-body ">
+                                        <h4 class="media-title">
+                                            Engagement value:
+                                            <strong class="pull-right">0</strong>
+                                        </h4>
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <span class="fa fa-eye"></span>
+                                    </div>
+                                    <div class="media-body ">
+                                        <h4 class="media-title">
+                                            Pages seen in this visit:
+                                            <strong class="pull-right">1</strong>
+                                        </h4>
+                                    </div>
+                                </div>
+                                <table class="table table-condensed table-borderless">
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-muted text-nowrap">
+                                                <span class="fa fa-street-view" title="Page has personalisation"></span>
+                                            </td>
+                                            <td class="text-nowrap" title="Home">Home</td>
+                                            <td>
+                                                <span>-</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <span class="fa fa-history"></span>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-title">
+                                            Visits to the site:
+                                            <strong class="pull-right">2</strong>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading" role="tab">
+                            <h3 class="panel-title">
+                                <a role="button" href="#personalInfoPanel" data-toggle="collapse" class="panel-title collapsed" data-parent="#experiencedata">
+                                    <span class="fa fa-user"></span>
+                                    Personal Information
+                                    <span class="glyphicon glyphicon-chevron-down pull-right"></span>
+                                </a>
+                            </h3>
+                        </div>
+                        <div id="personalInfoPanel" class="panel-collapse collapse" role="tabpanel">
+                            <div class="panel-body">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <span class="fa fa-user"></span>
+                                    </div>
+                                    <div class="media-body ">
+                                        <h4 class="media-title">
+                                            You are anonymous
+                                        </h4>
+                                        <dl class="small">
+                                            <dt>Anonymous ID (xDB.Tracker)</dt>
+                                            <dd>18e08ac52aab434a90192da9cfb74b79</dd>
+                                            <dt>Anonymous ID (Alias)</dt>
+                                            <dd>ef6bc3cf-f15c-41ae-94ac-49585a34526a</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <span class="fa fa-tablet"></span>
+                                    </div>
+                                    <div class="media-body ">
+                                        <h4 class="media-title">
+                                            Device
+                                        </h4>
+                                        <div class="text-nowrap">
+                                            <dl>
+                                                <dt>Device</dt>
+                                                <dd>Unknown, Desktop, Emulator</dd>
+                                                <dt>Browser</dt>
+                                                <dd>Chrome</dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading" role="tab">
+                            <h4 class="panel-title">
+                                <a role="button" href="#onsiteBehaviorPanel" data-toggle="collapse" class="panel-title collapsed" data-parent="#experiencedata">
+                                    <span class="fa fa-bullseye"></span>
+                                    Onsite Behavior
+                                    <span class="glyphicon glyphicon-chevron-down pull-right"></span>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="onsiteBehaviorPanel" class="panel-collapse collapse" role="tabpanel">
+                            <div class="panel-body">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <span class="fa fa-users"></span>
+                                    </div>
+                                    <div class="media-body ">
+                                        <h4 class="media-title">
+                                            Profiling
+                                        </h4>
+                                        <div class="media-body">
+                                            <div class="alert alert-info small">
+                                                You have not been profiled yet
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <span class="fa fa-trophy"></span>
+                                    </div>
+                                    <div class="media-body ">
+                                        <h4 class="media-title">
+                                            Triggered goals
+                                        </h4>
+                                        <div class="media-body">
+                                            <ul class="nav nav-tabs nav-justified small">
+                                                <li class="active">
+                                                    <a href="#onSiteBehaviorGoals" data-toggle="tab">Goals</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#onSiteBehaviorPageEvents" data-toggle="tab">Page Events</a>
+                                                </li>
+                                            </ul>
+
+                                            <div class="tab-content">
+                                                <div role="tabpanel" class="tab-pane active" id="onSiteBehaviorGoals">
+                                                    <div class="alert alert-info small">
+                                                        You have triggered no goals so far
+                                                    </div>
+                                                </div>
+                                                <div role="tabpanel" class="tab-pane" id="onSiteBehaviorPageEvents">
+                                                    <div class="alert alert-info small">
+                                                        You have triggered no page events so far
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <span class="fa fa-money"></span>
+                                    </div>
+                                    <div class="media-body ">
+                                        <h4 class="media-title">
+                                            Outcomes
+                                        </h4>
+                                        <div class="alert alert-info small">
+                                            You have reached no outcomes
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading" role="tab">
+                            <h4 class="panel-title">
+                                <a role="button" href="#referralPanel" data-toggle="collapse" class="panel-title collapsed" data-parent="#experiencedata">
+                                    <span class="fa fa-bullhorn"></span>
+                                    Referral
+                                    <span class="glyphicon glyphicon-chevron-down pull-right"></span>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="referralPanel" class="panel-collapse collapse" role="tabpanel">
+                            <div class="panel-body">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <span class="fa fa-sign-in"></span>
+                                    </div>
+                                    <div class="media-body ">
+                                        <h4 class="media-title">
+                                            Referrer
+                                        </h4>
+                                        <div class="text-nowrap" title="Direct traffic">
+                                            Direct traffic
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <span class="fa fa-bullhorn"></span>
+                                    </div>
+                                    <div class="media-body ">
+                                        <h4 class="media-title">
+                                            Campaigns
+                                        </h4>
+                                        <div class="alert alert-info small">
+                                            You have not been associated with any campaigns
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        @*Sidebar*@
 
     </div>
 
